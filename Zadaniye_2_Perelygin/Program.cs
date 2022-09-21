@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zadaniye_2_Perelygin
 {
-    class StatisticsDigits
+    public class StatisticsDigits
     {
-        public int number;
+         int number;
         public void Zchet() 
         {
             int i = 0;
@@ -22,13 +22,17 @@ namespace Zadaniye_2_Perelygin
             }
             Console.WriteLine("Количество чисел в числе: {0}", i);
         }
+        public StatisticsDigits(int _number) 
+        {
+            number = _number;
+        }
+       public StatisticsDigits() { }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            StatisticsDigits ex1 = new StatisticsDigits();
-            ex1.number = 64252;
+            StatisticsDigits ex1 = new StatisticsDigits(542);
             ex1.Zchet();
         }
     }
