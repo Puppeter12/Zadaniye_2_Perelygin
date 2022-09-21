@@ -8,7 +8,7 @@ namespace Zadaniye_2_Perelygin
 {
     public class StatisticsDigits
     {
-         int number;
+         public int number;
         public void Zchet() 
         {
             int i = 0;
@@ -22,6 +22,16 @@ namespace Zadaniye_2_Perelygin
             }
             Console.WriteLine("Количество чисел в числе: {0}", i);
         }
+        public void Summa()
+        {
+            int a = 0;
+            while (number > 0)
+            {
+                a += number % 10;
+               number /= 10;
+            }
+            Console.WriteLine("Сумма цифр числа = {0}", a);
+        }
         public StatisticsDigits(int _number) 
         {
             number = _number;
@@ -32,8 +42,8 @@ namespace Zadaniye_2_Perelygin
     {
         static void Main(string[] args)
         {
-            StatisticsDigits ex1 = new StatisticsDigits(542);
-            ex1.Zchet();
+            StatisticsDigits ex1 = new StatisticsDigits(721);
+            ex1.Summa();
         }
     }
 }
